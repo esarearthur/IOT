@@ -11,7 +11,7 @@ class PiThing(object):
     def __init__(self):
         """Initialize the 'thing'."""
         GPIO.setwarnings(False)
-        GPIO.setmode(GPIO.BCM)
+        GPIO.setmode(GPIO.BOARD)    #You dont need to used BCM on this since it will not match how you count the pins on the RPi
         GPIO.setup(LED_PIN, GPIO.OUT)
         GPIO.setup(SWITCH_PIN, GPIO.IN)
 
